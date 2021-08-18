@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding : 0 ;
+  box-sizing: border-box;
+}
+h1{
+  text-align: center;
+  margin-top: 50px
+}
+.container{
+  margin :auto;
+  margin-top: 100px;
+  width: 30%;
+}
+.sliders{
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+ .sliders .slide{
+  display:  none;
+  position: relative;
+  animation:  fader 0.5s ;
+}
+@keyframes fader {
+  from {opacity:  0}
+  to {opacity:  1}
+}
+.sliders .active{
+  display: block;
+}
+.slide img{
+  width: 400px;
+  height: 300px;
+}
+.slide .tittle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0d0d75;
+  color: #ccc;
+  position: absolute;
+  bottom: 0;
+  height: 35px;
+  width: 100%;
+  font-family: monospace;
+  font-size: 1rem;
+  transition: height 0.5s, font-size 0.5s ;
+}
+.slide .tittle:hover{
+  height: 100%;
+  cursor: pointer;
+  font-size: 2rem
+}
+.sliders span{
+  position: absolute;
+  padding: 15px;
+  font-size: 1.3rem;
+  background-color: #07187e78;
+  color: #ccc;
+
+}
+.sliders span:active{
+  background-color: #07187ea8
+}
+.sliders .prev-btn{
+  left : 0;
+  top:  40% ;
+  border-radius: 0 10px 10px 0;
+}
+.sliders .next-btn{
+  right : 0;
+  top:  40% ;
+  border-radius:  10px 0 0 10px;
+
+}
+.points {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.points span{
+  height: 15px;
+  width: 15px;
+  background-color: #c1c1c1;
+  border-radius: 50%;
+  margin: 2px;
+  cursor: pointer;
+}
+.points span:hover ,
+.points span.active{
+  background: #6a6a6a
+}
